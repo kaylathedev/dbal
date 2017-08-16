@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Library Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="test.mysql.host" value="127.0.0.1" />
+        <env name="test.mysql.username" value="root" />
+        <env name="test.mysql.password" value="password" />
+        <env name="test.mysql.port" value="3306" />
+        <env name="test.mysql.database" value="testing" />
+    </php>
+    <logging>
+        <log type="testdox-html" target="logs/testdox.html" highlight="true"></log>
+        <log type="json" target="logs/report.json" highlight="true"></log>
+        <log type="tap" target="logs/report.tap" highlight="true"></log>
+        <log type="junit" target="logs/report.xml" highlight="true"></log>
+    </logging>
+</phpunit>
